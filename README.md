@@ -32,3 +32,9 @@ https://www.webdesignerdepot.com/2019/12/50-best-websites-of-2019/
 
 Some very nice buttons, thanks codrop, fernando don't steal it :)
 https://tympanus.net/Development/CreativeButtons/
+
+Nice book
+https://www.amazon.com/Steal-Like-Artist-Things-Creative-ebook/dp/B0074QGGK6
+
+Robert Penner equations
+https://easings.net/#
