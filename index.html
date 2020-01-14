@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .ball {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background: url(ball.png) no-repeat;
+            background-size: cover;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+        .animated {
+            animation: moveAlong 2s ease-out;
+            animation-iteration-count: 2;
+            /* animation-fill-mode: forwards; */
+            animation-direction: alternate;
+        }
+
+        .ball-1 {
+            left: 100px;
+            height: 300px;
+            width: 300px;
+        }
+
+        nav {
+            padding: 20px;
+        }
+
+        button {
+            font-size: 24px;
+        }
+
+        @keyframes moveAlong {
+            0% {
+                transform: rotate(0deg);
+                
+            }
+
+            50% {
+                top: 300px;
+                height: 100px;
+                width: 100px;
+            }
+
+            /* 33% {
+                transform: rotate(100deg);
+            }
+
+            66% {
+                transform: rotate(200deg);
+            } */
+
+            100% {
+                transform: rotate(360deg);
+                left: 550px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <button id="start-animation">Click me to start animation</button>
+    </nav>
+    <div class="ball ball-1"></div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ut libero, aliquam nesciunt sunt dicta deserunt non similique suscipit impedit sequi iure officiis sapiente soluta ipsam aperiam quo, accusantium deleniti.</p>
+    <!-- <div class="ball ball-1"></div>
+    <div class="ball"></div>
+    <div class="ball"></div> -->
+
+    <script>
+        // event handler
+        document.getElementById("start-animation").onclick = function () {
+            document.querySelector(".ball").className = "ball ball-1 animated"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .ball {
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            background: url(ball.png) no-repeat;
+            background-size: cover;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+    </style>
+</head>
+<body>
+ 
+    <div class="ball ball-1"></div>
+  
+
+    <script>
+        // ball caches a reference to the ball element
+        let ball = document.querySelector(".ball")
+        // this stores the X position for the ball
+        let posX = 0
+        // this stores the current rotation in degrees
+        let degrees = 0
+
+        // when the ball is clicked...
+        ball.onclick = function () {
+            // we set a recurrent function that gets called every 10ms
+            // also we store a reference to the interval so we can stop it anytime
+            let intervalID = setInterval(() => {
+                // here we increase the 5 position every 10ms in 5 units
+                posX+=5
+                // here we set the X position for the ball, updating it
+                ball.style.left = posX + "px"
+                ball.style.top = `${200 * Math.cos(degrees * Math.PI / 180)}px`
+                // here we set the rotation for the ball increasing it in a degree every 10ms
+                ball.style.transform = `rotate(${degrees++}deg)`
+
+                // here we check whethe the X position is greater than 550px and if so...
+                if (posX > 550 * 3) {
+                    // we stop the animation
+                    clearInterval(intervalID)
+                }
+            }, 10)
+        }
+    </script>
+</body>
+</html>
