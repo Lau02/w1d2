@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css" />
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        background-color: green;
+        transition: background-color 1s;
+      }
+
+      /* breakpoint enters at 600 pixels */
+      @media screen and (min-width: 600px) {
+        body {
+          background-color: blue;
+        }
+      }
+
+      /* breakpoint enters at 1200 pixels */
+      @media screen and (min-width: 1200px) {
+        body {
+          background-color: red;
+        }
+      }
+    </style>
+  </head>
+  <body></body>
+</html>

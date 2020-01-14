@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        background: #383431;
+      }
+
+      nav > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 900px;
+        width: 100%;
+      }
+
+      nav button#sections {
+        background: url(img/sections.png) no-repeat;
+        border: 0;
+        width: 28px;
+        height: 28px;
+        display: none;
+      }
+
+      nav input {
+        border-radius: 10px;
+        color: #66615d;
+        border: 0;
+        max-width: 250px;
+        width: 100%;
+        /* 10px 20px ===> top and bottom /// left and right */
+        padding: 10px 20px;
+        padding-left: 40px;
+        outline: none;
+        background: #4c4642 url("img/magnifier.png") 10px 5px no-repeat;
+        transition: max-width 1s;
+      }
+
+      nav input:focus {
+        color: white;
+      }
+
+      nav #view-accounts {
+        display: flex;
+        align-items: center;
+        color: white;
+        background: url(img/user.png) left center;
+        background-repeat: no-repeat;
+        padding-left: 30px;
+        height: 30px;
+        display: none;
+      }
+
+      nav .dark {
+        background: #2b2826;
+        color: white;
+        border: 0;
+        padding: 20px;
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      @media screen and (min-width: 600px) {
+        nav button#sections {
+          display: block;
+        }
+
+        nav input {
+          max-width: 350px;
+        }
+      }
+      @media screen and (min-width: 800px) {
+        nav #view-accounts {
+          display: flex;
+        }
+
+        nav input {
+          max-width: 400px;
+        }
+      }
+
+      #promo {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #promo .box {
+        width: 100vw;
+        height: 30vh;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        background-size: cover;
+      }
+
+      #promo .box h1,
+      #promo .box h2 {
+        font-size: 40px;
+        margin-bottom: 20px;
+      }
+
+      #promo .box h2 {
+        font-weight: bold;
+      }
+
+      #promo .box:nth-child(1) {
+        background: url(https://www.oracle.com/asset/web/i/rh02-panel1.jpg)
+          no-repeat;
+      }
+
+      #promo .box:nth-child(2) {
+        background: url(https://www.oracle.com/asset/web/i/rh02-panel2.jpg)
+          no-repeat;
+      }
+
+      #promo .box:nth-child(3) {
+        background: url(https://www.oracle.com/a/ocom/img/rh02-cts-ce-summit-intl-.jpg)
+          no-repeat;
+      }
+
+      @media screen and (min-width: 1080px) {
+        #promo {
+          flex-direction: row;
+          height: 90vh;
+        }
+
+        #promo .box {
+          height: 90vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <img src="img/logo.png" alt="" />
+        <button id="sections"></button>
+        <input type="text" placeholder="Hello how are you?" />
+        <div id="view-accounts">view accounts</div>
+        <button class="dark">Try oracle whatnot</button>
+      </div>
+    </nav>
+    <section id="promo">
+      <div class="box">
+        <h1>Lorem, ipsum.</h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
+          deserunt.
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis
+          numquam aspernatur laudantium expedita voluptatibus autem corporis!
+          Iure adipisci doloremque consequuntur temporibus aliquid quibusdam
+          tempore esse cum! Sint rem autem id.
+        </p>
+      </div>
+      <div class="box">
+        <h1>Quas, dolorum.</h1>
+        <h2>Obcaecati facere similique fuga!</h2>
+        <h3>
+          Molestias nulla dolor magni distinctio deleniti temporibus quae
+          mollitia recusandae?
+        </h3>
+        <p>
+          Quo in vero nostrum quae voluptas neque eligendi eius impedit velit
+          voluptatibus cupiditate accusamus rerum soluta, dignissimos veniam
+          assumenda veritatis placeat aspernatur beatae ea minus, ipsum iste
+          quis omnis! Numquam?
+        </p>
+      </div>
+      <div class="box">
+        <h1>Molestiae, cumque.</h1>
+        <h2>Maxime recusandae molestiae tempore!</h2>
+        <h3>
+          Dolor quo perspiciatis quaerat earum molestiae impedit velit maxime
+          nostrum?
+        </h3>
+        <p>
+          Dicta accusantium dolorum saepe nemo ipsa veritatis unde? Deleniti aut
+          sequi dolor autem excepturi expedita similique fugit, minus quis iusto
+          officiis esse cum aliquam necessitatibus animi cupiditate quibusdam
+          exercitationem in.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
